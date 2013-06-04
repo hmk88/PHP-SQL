@@ -1,0 +1,82 @@
+$user = 'pma';
+// Here we define connection values
+$pswd = '';
+$dbName = 'test';
+$server = 'localhost';
+//Here we try to establish the connection
+//We also use error control operator @ to suppress error and warning
+//
+messages
+$dbConn = @mysql_connect($server,$user, $pswd);
+if (!$dbConn)
+{
+echo "Connection failed: " . mysql_error() . "<br/>";
+}
+else
+{
+if(!mysql_select_db($dbName))
+//Here we select a database.
+{
+echo "Could not select $dbNam
+e database: " .
+mysql_error($dbConn);
+}
+else
+{
+// select the table
+$table = 'data';
+}}
+// Table & Database selected
+//This part shows how to fetch the data from the database.
+$queryString="select * from $table";
+$queryResults=mysql_
+query($queryString, $dbConn);
+if($queryResults == FALSE)
+{
+echo "Couldn't retrieve data from $table<br/>";
+}
+else
+{
+$result = mysql_query($queryString, $dbConn) or
+die(mysql_error());
+while ($i < mysql_num_fields($result))
+{
+$meta =
+m
+ysql_fetch_field($result, $i);
+if($i>0)
+$header[]=$meta
+-
+>name;
+if (!$meta)
+{
+echo "No information available<br />
+\
+n";
+}
+$i++;
+}
+echo"<br/><div><table><tr>";
+echo"<td >$header[0]</td><td>$header[1]</td><td>
+$header[2]</td>
+<td>$header[3]</td><td >$header[4]</td></tr>";
+//Here we read data into an associative array and iterate automatically through all
+//
+rows.
+while(($row=mysql_fetch_assoc($queryResults)) !== FALSE)
+{
+foreach($row as $columnName=>$val
+ue)
+{
+if($columnName != "id")
+echo "<td>$value</td> ";
+}
+echo"</tr>";
+}
+//end of while
+//end table and div.
+echo "</table></div>";
+}
+}
+mysql_close($dbConn);
+// In the end close the connection
