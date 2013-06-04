@@ -31,7 +31,7 @@ Type"content="text/html; charset=utf
 <a href="">About</a>
 </div>
 <?php
-//Here we implement our PHP logic to get the data 
+//Here we implement our PHP logic to get the data. It can be seen at https://github.com/hmk88/PHP-SQL/blob/master/PHP_SQL_codes 
 ?>
 <div id="content"><!
 --
