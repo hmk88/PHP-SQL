@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "
+-
+//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1
+-
+transitional.dtd">
+<html xmlns="http://www.w3c.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<link href="css/style.css"
+rel="stylesheet" type="text/css" /> //Note that CSS is used
+<meta http
+-
+equiv="Content
+-
+Type"content="text/html; charset=utf
+-
+8" />
+<title>Data Clollecting Center </title>
+</head>
+<body>
+<div id ="header">
+<h1>Cloud Platform</h1>
+</div>
+<div id="container">
+<p class ="title">Welcome to the Data Center</p>
+<div id="navigation">
+<br/><br/><br/><br/>
+<a href="main.html">Home Page</a>
+<a href="">Next Page</a>
+<a href="">Set Values</a>
+<a href="">About</a>
+</div>
+<?php
+//Here we implement our PHP logic to get the data 
+?>
+<div id="content"><!
+--
+Data and Graph.
+--
+>
+<h1 class="title">Temperature Graph</h1>
+<p>This data is taken from the WSN.</p>
+</div>
+<!
+--
+End of the page
+--
+>
+<div id="footer">
+<p>Copyrigh
+ts &copy; <a href="#">Plain and simple</a>Designed by
+<a href="Kamran">Kamran</a> </p>
+</div>
+</div></body></html>
